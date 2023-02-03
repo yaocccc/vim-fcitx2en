@@ -2,6 +2,13 @@
 
 用于linux系统，fcitx输入法环境，在退出insert模式时，自动切换至英文
 
+# 使用
+
+```plaintext
+  -- packer
+  use { 'yaocccc/vim-fcitx2en', event = 'InsertLeavePre' }
+```
+
 ## Support
 
 <a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
