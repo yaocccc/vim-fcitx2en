@@ -9,6 +9,21 @@
   use { 'yaocccc/vim-fcitx2en', event = 'InsertLeavePre' }
 ```
 
+## 配置，如果你希望其他情况也自动切换至英文
+
+e.g.
+
+```plaintext
+  -- packer
+  use {
+    'yaocccc/vim-fcitx2en',
+    setup = function()
+      vim.g.fcitx_on_events = 'InsertLeave,InsertEnter'
+    end,
+    event = { 'InsertLeavePre', 'InsertEnter' }
+  }
+```
+
 ## Support
 
 <a href="https://www.buymeacoffee.com/yaocccc" target="_blank">

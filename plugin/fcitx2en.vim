@@ -2,6 +2,7 @@ if exists('s:loaded')
   finish
 endif
 let s:loaded = 1
+let s:fcitx_on_events = get(g:, 'fcitx_on_events', 'InsertLeave')
 let s:f_status = system("fcitx-remote")
 let s:cmd = s:f_status == 1 || s:f_status == 2 ? "fcitx-remote" : "fcitx5-remote"
 
@@ -12,4 +13,4 @@ func! s:fcitx2en()
    endif
 endf
 
-autocmd InsertLeave * call <SID>fcitx2en()
+call execute('autocmd ' . s:fcitx_on_events . ' * call <SID>fcitx2en()')
