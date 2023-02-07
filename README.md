@@ -20,7 +20,7 @@ e.g.
     setup = function()
       vim.g.fcitx_on_events = 'InsertLeave,InsertEnter'
     end,
-    event = { 'InsertLeavePre', 'InsertEnter' }
+    event = { 'InsertLeave', 'InsertEnter' }
   }
 ```
 
